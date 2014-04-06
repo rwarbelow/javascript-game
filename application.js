@@ -1,29 +1,58 @@
 $( document ).ready(function() {
-
-	$('.block').css('background-color', getRandomColor)
-	$('.block').each(function(){
-		var randNumber = getRandomNumber();
-		$(this).append('<p class="large-text">' + randNumber + '</p>');
-	});
+	setGameBoard();
 
 	$('.block').click(function(){
 		changeClass($(this));
 	});
 
 	$('.block').click(function(){
-		if ($('.isSelected').length == 2){
-			total = findTotal();
-			if (total == 100){
-				winningScreen();
-			};
-			reloadBoard(total);
-		}
+		playGame();
+	});
+
+	$(".container").on('click', '.play-again', function() {
+		location.reload();
 	});
 
 	
 });
 
 var multiply_by = [-1,1]
+var clicks = 10
+
+function checkLoss(){
+	if (clicks == 1){
+		losingScreen();
+	};
+};
+
+function setGameBoard(){
+	$('.score').html('<p class="score-heading">' + clicks + '</p>');
+	$('.block').css('background-color', getRandomColor)
+	$('.block').each(function(){
+		$(this).append('<p class="large-text">' + getRandomNumber() + '</p>');
+	});
+};
+
+function playGame(){
+	if ($('.isSelected').length == 2){
+		checkLoss();
+		clicks -= 1;
+		updateScore();
+		total = findTotal();
+		checkWin(total);
+		reloadBoard(total);
+	}
+};
+
+function checkWin(total){
+	if (total == 50){
+		winningScreen();
+	};
+};
+
+function updateScore(){
+	$('.score').html('<p class="score-heading">' + clicks + '</p>');
+};
 
 function findTotal(){
 	var toAdd = []
@@ -77,6 +106,12 @@ function reloadBoard(total){
 }
 
 function winningScreen(){
-	$('.container').html('<div style="text-align:center"><p class="won">You Won!</p></div>')
+	$('.container').html('<div style="text-align:center"><p class="won">You Won!</p></div><div class="play-again">Play again</div>')
 };
+
+function losingScreen(){
+	$('.container').html('<div style="text-align:center"><p class="lost">You lost :(</p></div><div class="play-again">Play again</div>')
+};
+
+
 

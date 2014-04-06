@@ -14,8 +14,8 @@ ul {
 	width: 700px;
 	border: 3px solid #aaaaaa;
 	border-radius: 9px;
-	margin-top: 50px;
-	height: 600px;
+	margin-top: 40px;
+	height: 660px;
 	text-align: center;
 }
 
@@ -47,6 +47,15 @@ ul {
 
 .won {
 	margin-top: -10px;
+	margin-bottom: 0px;
+	font-size: 200px;
+	font-weight: bold;
+	color: blue;
+}
+
+.lost {
+	margin-top: -10px;
+	margin-bottom: 0px;
 	font-size: 200px;
 	font-weight: bold;
 	color: red;
@@ -60,3 +69,32 @@ a {
 .rules {
 	margin-top: 20px;
 }
+
+.score-text {
+	padding-top: 5px;
+	width: 170px;
+	background-color: #f1c40f;
+	height: 50px;
+	margin: 0 auto;
+	border-radius: 18px;
+	margin-bottom: 20px;
+	margin-top: 25px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.score-heading {
+	font-size: 30px;
+	margin-top: 0px;
+}
+
+.play-again {
+	margin-top: -100px;
+	background-color: yellow;
+	width: 120px;
+	margin: 0 auto;
+	height: 30px;
+	padding-top: 8px;
+	border-radius: 8px;
+}
+

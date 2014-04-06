@@ -52,4 +52,11 @@ ul {
 	color: red;
 }
 
+a {
+	text-decoration: none;
+	color: #ee0991;
+}
 
+.rules {
+	margin-top: 20px;
+}

@@ -27,7 +27,7 @@ ul {
 	width: 70%;
 	height: 450px;
 	margin: 0 auto;
-	margin-top: 10px;
+	margin-top: -6px;
 }
 
 .block {
@@ -37,6 +37,10 @@ ul {
 	float: left;
 	border-radius: 13px;
 	text-align: center;
+}
+
+.lock {
+	background-color: black;
 }
 
 .large-text {
@@ -67,13 +71,14 @@ a {
 }
 
 .rules {
-	margin-top: 20px;
+	margin-top: 15px;
+	margin-bottom: 0px;
 }
 
 .score-text {
 	padding-top: 5px;
-	width: 170px;
-	background-color: #f1c40f;
+	width: 150px;
+	background-color: #e74c3c;
 	height: 50px;
 	margin: 0 auto;
 	border-radius: 18px;
@@ -90,11 +95,23 @@ a {
 
 .play-again {
 	margin-top: -100px;
-	background-color: yellow;
-	width: 120px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	width: 135px;
 	margin: 0 auto;
-	height: 30px;
+	height: 135px;
 	padding-top: 8px;
 	border-radius: 8px;
+}
+
+.winblock {
+	width: 28%;
+	height: 28%;
+	margin: 13px;
+	float: left;
+	border-radius: 13px;
+	text-align: center;
+	background-color: black;
 }
 

@@ -1,0 +1,32 @@
+body {
+	font-family: sans-serif;
+}
+
+.container {
+	margin: 0 auto;
+	width: 50%;
+	border: 3px solid #aaaaaa;
+	border-radius: 9px;
+	margin-top: 50px;
+	height: 600px;
+}
+
+.header {
+	text-align: center;
+}
+
+.game-container {
+	width: 70%;
+	height: 450px;
+	border: 1px solid black;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.block {
+	width: 28%;
+	height: 28%;
+	background-color: red;
+	margin: 13px;
+	float: left;
+}

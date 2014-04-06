@@ -37,6 +37,7 @@ ul {
 	float: left;
 	border-radius: 13px;
 	text-align: center;
+	cursor: pointer;
 }
 
 .lock {

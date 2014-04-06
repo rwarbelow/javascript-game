@@ -1,23 +1,31 @@
 $( document ).ready(function() {
 	$('.block').css('background-color', getRandomColor);
 	$('.block').data("color", getRandomColor())
-	$(".block").each(function(){
+	$('.block').each(function(){
 		var randNumber = getRandomNumber();
 		$(this).append('<p class="large-text">' + randNumber + '</p>');
 	});
 
 	$('.block').click(function(){
-		if ($(this).hasClass('isSelected')) {
-			removeSelected($(this));
-		} 
-		else {
-			select($(this));
-		}
-
+		changeClass($(this));
 	});
+	$(document).keypress(function(e) {
+		if(e.which == 13) {
+			var selected = $('.isSelected').length;
+			if (selected == 2){
+				var toAdd = ($('.isSelected').text()).split('');
+				var total = 0;
+				jQuery.each( toAdd, function( i, val ) {
+					total += parseInt(val);
+				});
+				alert(total);
+			}
+		}
+	});
+
 });
 
-
+var WINNING_NUMBER = 100;
 var numbers = [1,2,3,4,5];
 function getRandomNumber(){
 	return numbers[Math.floor(Math.random() * numbers.length)];
@@ -36,7 +44,16 @@ function removeSelected(item){
 	$(item).css('background-color', getRandomColor());
 }
 
-function select(item) {
+function changeToSelected(item) {
 	$(item).css('background-color',"")
 	$(item).addClass('isSelected');
+}
+
+function changeClass(item){
+	if ($(item).hasClass('isSelected')) {
+		removeSelected($(item));
+	} 
+	else {
+		changeToSelected($(item));
+	}
 }

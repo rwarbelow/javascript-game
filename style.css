@@ -5,13 +5,18 @@ body {
 	background-color: #bbbbbb;
 }
 
+ul {
+	list-style: none;
+}
+
 .container {
 	margin: 0 auto;
-	width: 50%;
+	width: 700px;
 	border: 3px solid #aaaaaa;
 	border-radius: 9px;
 	margin-top: 50px;
 	height: 600px;
+	text-align: center;
 }
 
 .header {
@@ -22,7 +27,7 @@ body {
 	width: 70%;
 	height: 450px;
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: 10px;
 }
 
 .block {
@@ -38,6 +43,13 @@ body {
 	font-size: 40px;
 	font-weight: bold;
 	color: white;
+}
+
+.won {
+	margin-top: -10px;
+	font-size: 200px;
+	font-weight: bold;
+	color: red;
 }
 
 

@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-	$('.block').css('background-color', getRandomColor);
-	$('.block').data("color", getRandomColor())
+
+	$('.block').css('background-color', getRandomColor)
 	$('.block').each(function(){
 		var randNumber = getRandomNumber();
 		$(this).append('<p class="large-text">' + randNumber + '</p>');
@@ -23,8 +23,7 @@ $( document ).ready(function() {
 	
 });
 
-var WINNING_NUMBER = 100;
-var numbers = [2,4,8,10,12,13,19];
+var multiply_by = [-1,1]
 
 function findTotal(){
 	var toAdd = []
@@ -39,7 +38,7 @@ function findTotal(){
 }
 
 function getRandomNumber(){
-	return numbers[Math.floor(Math.random() * 7)];
+	return (multiply_by[Math.round(Math.random())] * Math.floor(Math.random() * 20) + 1);
 }
 function getRandomColor() {
 	var letters = '0123456'.split('');

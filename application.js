@@ -1,20 +1,14 @@
 $( document ).ready(function() {
 	setGameBoard();
-
 	$('.block').click(function(){
 		changeClass($(this));
-	});
-
-	$('.block').click(function(){
 		playGame();
 	});
-
 	$(".container").on('click', '.play-again', function() {
 		location.reload();
 	});
-
-	
 });
+
 
 var multiply_by = [-1,1]
 var clicks = 10

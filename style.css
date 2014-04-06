@@ -1,6 +1,9 @@
 body {
 	font-family: sans-serif;
 }
+.isSelected {
+	background-color: #bbbbbb;
+}
 
 .container {
 	margin: 0 auto;
@@ -18,7 +21,6 @@ body {
 .game-container {
 	width: 70%;
 	height: 450px;
-	border: 1px solid black;
 	margin: 0 auto;
 	margin-top: 40px;
 }
@@ -26,7 +28,16 @@ body {
 .block {
 	width: 28%;
 	height: 28%;
-	background-color: red;
 	margin: 13px;
 	float: left;
+	border-radius: 13px;
+	text-align: center;
 }
+
+.large-text {
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+}
+
+

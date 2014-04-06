@@ -21,9 +21,9 @@ function checkLoss(){
 
 function setGameBoard(){
 	$('.score').html('<p class="score-heading">' + clicks + '</p>');
-	$('.block').css('background-color', getRandomColor)
 	$('.block').each(function(){
 		$(this).append('<p class="large-text">' + getRandomNumber() + '</p>');
+		$(this).css('background-color', getRandomColor())
 	});
 };
 

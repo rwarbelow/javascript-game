@@ -10,7 +10,7 @@ $( document ).ready(function() {
 
 
 var multiply_by = [-1,1]
-var clicks = 30
+var clicks = 20
 var fifties = 0
 
 function checkLoss(total){

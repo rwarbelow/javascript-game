@@ -10,17 +10,17 @@ $( document ).ready(function() {
 		changeClass($(this));
 	});
 
-	$(document).keypress(function(e) {
-		if(e.which == 13) {
-			if ($('.isSelected').length == 2){
-				total = findTotal();
-				if (total == 100){
-					winningScreen();
-				};
-				reloadBoard(total);
-			}
+	$('.block').click(function(){
+		if ($('.isSelected').length == 2){
+			total = findTotal();
+			if (total == 100){
+				winningScreen();
+			};
+			reloadBoard(total);
 		}
 	});
+
+	
 });
 
 var WINNING_NUMBER = 100;
